@@ -12,7 +12,7 @@ def classify_question(state: Dict[str, Any]) -> Dict[str, Any]:
         Updated state with the classification information.
     """
     llm = get_llm()
-    classification_prompt = ChatPromptTemplate.from_messages("""
+    classification_prompt = ChatPromptTemplate.from_template("""
     You are an AI that classifies progamming questions into specific categories.
     
     Please classify the following query into one of these categories:
